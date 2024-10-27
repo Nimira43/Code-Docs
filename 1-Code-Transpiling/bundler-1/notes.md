@@ -21,3 +21,7 @@
 ###### It offers features like hot module replacement (HMR), which allows you to update modules in the browser without a full page reload, speeding up development.
 
 ###### In essence, Webpack streamlines the process of writing, bundling, and transpiling your JavaScript, making it easier to maintain and optimise your codebase.
+
+## Distribution Folder
+
+###### The dist (short for "distribution") folder is where your finalised code lives after being processed, bundled, and optimized. It's like your project’s ready-to-ship version, containing all the files you need for deployment, stripped of unnecessary elements like source maps and unused files. Essentially, it’s your project, polished and prepared for the world.
