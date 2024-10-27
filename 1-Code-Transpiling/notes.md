@@ -25,3 +25,41 @@
 ## Distribution Folder
 
 ###### The dist (short for "distribution") folder is where your finalised code lives after being processed, bundled, and optimized. It's like your project’s ready-to-ship version, containing all the files you need for deployment, stripped of unnecessary elements like source maps and unused files. Essentially, it’s your project, polished and prepared for the world.
+
+## Common JS vs ES Modules
+
+#### CommonJS (CJS)
+##### Syntax: 
+###### Uses require() to import modules and module.exports to export them.
+
+##### Loading: 
+###### Synchronous, meaning the module is loaded as soon as it's required.
+
+##### Environment: 
+###### Primarily used in Node.js for server-side JavaScript.
+
+#### ES Modules (ESM)
+##### Syntax: 
+###### Uses import to bring in modules and export to send them out.
+
+##### Loading: 
+###### Asynchronous, allowing for more efficient loading and better performance.
+
+##### Environment: 
+###### Supported by modern browsers and Node.js (since version 13.2.0).
+
+## Webpack and Both Module Systems
+
+###### Webpack is incredibly versatile and supports both CommonJS and ES Modules. Here’s how it handles them:
+
+#### Bundling: 
+###### Webpack bundles all your JavaScript files, regardless of the module system used.
+
+#### Transpiling: 
+###### It can integrate with Babel to transpile ES Modules into CommonJS if needed, ensuring compatibility with older environments.
+
+#### Loaders and Plugins: 
+###### Webpack uses loaders to process files (like transpiling) and plugins to perform various tasks (like optimization).
+
+#### Consistency: 
+###### While Webpack supports both module systems, it’s recommended to stick to one for consistency and to avoid potential issues.
