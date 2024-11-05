@@ -1,4 +1,4 @@
-function App() {
+const App = () => {
   return (
     <div className='main-container'>
       <h1>Transpiling Demo using ESBuild</h1>
