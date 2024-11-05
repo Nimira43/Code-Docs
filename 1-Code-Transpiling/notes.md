@@ -63,3 +63,22 @@
 
 #### Consistency: 
 ###### While Webpack supports both module systems, it’s recommended to stick to one for consistency and to avoid potential issues.
+
+## The Npm Install Webpack Plugin
+
+###### The Npm Install Webpack Plugin is a handy tool that speeds up development by automatically installing and saving dependencies while you work. Instead of manually installing missing packages, this plugin does it for you on the fly.
+
+#### Key Features:
+##### Automatic Installation: 
+###### Installs missing dependencies as you require or import them.
+
+##### Supports ES5 & ES6 Modules: 
+###### Works with both CommonJS and ES Modules.
+
+##### Namespaced Packages: 
+###### Handles packages like @cycle/dom.
+
+##### Inline Webpack Loaders: 
+###### Supports loaders like babel-loader and file-loader.
+
+##### Peer Dependencies: Automatically installs missing peer dependencies.
