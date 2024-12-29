@@ -1,75 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=League+Spartan:wght@100..900&display=swap');
 
-* {
-  font-family: 'League Spartan', sans-serif;
-  font-weight: 400;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
   margin: 0;
-  box-sizing: border-box;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .main-container {
-  position: relative;
-  padding: 30px;
-  width: 100%;
-  height: 100vh;
-  background-color: #87ceeb;
-  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+
+h1 {
+  color: #008080; /* Teal */
 }
 
 .sub-container {
-  position: relative;
-  margin-top: 30px;
-  padding: 20px;
-  height: 400px;
-  width: 600px;
-  background-color: #111;
-  border: 3px dotted #ff4500; 
-  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.8);
+  margin-top: 20px;
 }
 
 textarea {
   width: 100%;
-  height: 40%;
-  font-size: 15px;
-  background-color: transparent;
-  border: 3px dotted #ff4500;
-  border-radius: 5px;
-  color: #ff4500;
+  height: 150px;
   padding: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  outline: none;
 }
 
 button {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  font-size: 15px;
-  font-weight: 900;
-  background-color: #ff4500;
+  background-color: #008080;
+  color: white;
   border: none;
-  border-radius: 3px;
-  padding: 6px 4px;
-  cursor: pointer
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  opacity: 0.85;
-}
-
-button:active {
-  transform: scale(0.98);
-}
-
-.logo {
-  position: absolute;
-  bottom: 50px;
-  right: 50px;
   background-color: #111;
-  color: #ff4500;
-  font-family: 'Amatic SC', sans-serif;
-  font-size: '22px';
-  font-weight: bold;
-  padding: 5px 10px;
-  border: 3px dotted #ff4500;
-  border-radius: 5px;
-  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.8);
 }
+
+pre {
+  background-color: transparent; 
+  color: 111;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 20px;
+  text-align: left;
+  overflow-x: auto;
+  max-width: 100%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.code-container {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 20px;
+  overflow: hidden;
+  max-width: 100%;
+}
+

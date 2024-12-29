@@ -26,8 +26,8 @@ const App = () => {
       loader: 'jsx',
       target: 'es2015'
     })
-    console.log(result)
-  }
+    setCode(result.code)
+  } 
 
   return (
     <>
@@ -37,12 +37,14 @@ const App = () => {
           <textarea 
             value={input}
             onChange={e => setInput(e.target.value)}
+            placeholder='Enter your code here'
           >
           </textarea>
           <button onClick={onClick}>Submit</button>
         </div>  
-        <pre>{code}</pre>
-        <h1 className='logo'>NimiraTech</h1>
+        <div className='code-container'> 
+          <pre>{code}</pre> 
+        </div>
       </div>
     </>
       )
