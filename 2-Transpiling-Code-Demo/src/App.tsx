@@ -29,8 +29,9 @@ const App = () => {
       write: false,
       plugins: [unpkgPathPlugin()]
     })
-    console.log(result)
-    setCode(result.code)
+    // console.log(result)
+
+    setCode(result.outputFiles[0].text)
   } 
 
   return (
