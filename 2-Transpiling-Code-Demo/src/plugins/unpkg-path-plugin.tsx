@@ -26,6 +26,8 @@ export const unpkgPathPlugin = () => {
             `
           }
         } 
+        const { data } = await axios.get(args.path)
+        console.log(data)
       }) 
     }
   }
