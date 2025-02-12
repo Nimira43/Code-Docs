@@ -35,7 +35,7 @@ export const unpkgPathPlugin = () => {
             loader: 'jsx',
             contents: `
               import THREE from 'three.js';
-              import React, { useState } from 'react';
+              import React, { useState } from 'react@16.0.0';
               console.log(THREE, React, useState);
             `
           }
