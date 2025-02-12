@@ -73,6 +73,7 @@ button:hover {
 }
 
 pre {
+  font-family: 'Space Mono', monospace;
   background-color: transparent; 
   color: #111;
   padding: 10px;
