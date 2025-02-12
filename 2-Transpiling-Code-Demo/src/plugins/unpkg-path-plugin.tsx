@@ -36,7 +36,7 @@ export const unpkgPathPlugin = () => {
             contents: `
               const three = require('three.js');
               const react = require('react');
-              console.log(message);
+              console.log(three, react);
             `
           }
         } 
