@@ -9,7 +9,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  overflow: auto;
 }
 
 .main-container {
@@ -66,7 +67,7 @@ button:hover {
   border: 1px solid #ff4500;
   border-radius: 4px;
   margin-top: 20px;
-  overflow: hidden;
+  overflow: auto;
   max-width: 100%;
 }
 
