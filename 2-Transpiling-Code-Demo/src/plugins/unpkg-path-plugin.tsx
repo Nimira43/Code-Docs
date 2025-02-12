@@ -16,7 +16,6 @@ export const unpkgPathPlugin = () => {
           path: `https://unpkg.com/${args.path}` 
         }
 
-
         // else if (args.path === 'tiny-test-pkg') {
         //   return { path: 'https://unpkg.com/tiny-test-pkg@1.0.0/index.js', namespace: 'a'}
         // }
@@ -29,7 +28,7 @@ export const unpkgPathPlugin = () => {
           return {
             loader: 'jsx',
             contents: `
-              const message = require('tiny-test-pkg');
+              const message = require('medium-test-pkg');
               console.log(message);
             `
           }
