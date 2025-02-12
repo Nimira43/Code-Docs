@@ -34,9 +34,9 @@ export const unpkgPathPlugin = () => {
           return {
             loader: 'jsx',
             contents: `
-              const three = require('three.js');
-              const react = require('react');
-              console.log(three, react);
+              import THREE from 'three.js';
+              import React from 'react';
+              console.log(THREE, React);
             `
           }
         } 
