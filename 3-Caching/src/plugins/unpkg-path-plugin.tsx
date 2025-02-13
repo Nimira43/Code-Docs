@@ -4,13 +4,7 @@ import localforage from 'localforage'
 
 const fileCache = localforage.createInstance({
   name: 'filecache'
-});
-
-(async() => {
-  await fileCache.setItem('colour', 'red')
-  const colour = await fileCache.getItem('colour')
-  console.log(colour)
-}) ()
+})
 
 export const unpkgPathPlugin = () => {
   return {
@@ -51,6 +45,13 @@ export const unpkgPathPlugin = () => {
             `
           }
         } 
+
+        const cachedResult = await fileCache.getItem(args.path)
+
+        if (cachedResult) {
+          return cachedResult
+        }
+
         const { data, request } = await axios.get(args.path)
         return {
           loader: 'jsx',
