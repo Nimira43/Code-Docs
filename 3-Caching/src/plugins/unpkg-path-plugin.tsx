@@ -6,7 +6,7 @@ const fileCache = localforage.createInstance({
   name: 'filecache'
 })
 
-export const unpkgPathPlugin = () => {
+export const unpkgPathPlugin = (inputCode: string) => {
   return {
     name: 'unpkg-path-plugin',
     setup(build: esbuild.PluginBuild) {
@@ -38,11 +38,7 @@ export const unpkgPathPlugin = () => {
         if (args.path === 'index.js') {
           return {
             loader: 'jsx',
-            contents: `
-              import THREE from 'three.js';
-              import React, { useState } from 'react@16.0.0';
-              console.log(THREE, React, useState);
-            `
+            contents: inputCode 
           }
         } 
 
