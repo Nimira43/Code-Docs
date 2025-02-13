@@ -1,12 +1,6 @@
 import * as esbuild from 'esbuild-wasm'
-import axios from 'axios'
-import localforage from 'localforage'
 
-const fileCache = localforage.createInstance({
-  name: 'filecache'
-})
-
-export const unpkgPathPlugin = (inputCode: string) => {
+export const unpkgPathPlugin = () => {
   return {
     name: 'unpkg-path-plugin',
     setup(build: esbuild.PluginBuild) {
@@ -31,8 +25,6 @@ export const unpkgPathPlugin = (inputCode: string) => {
           path: `https://unpkg.com/${args.path}` 
         }
       })
-      
-      
     }
   }
 }
