@@ -58,6 +58,7 @@ export const fetchPlugin = (inputCode: string) => {
           contents: data,
           resolveDir: new URL('./', request.responseURL).pathname
         }
+        
         await fileCache.setItem(args.path, result)
         return result
       }) 
