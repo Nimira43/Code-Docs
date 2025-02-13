@@ -42,7 +42,6 @@ export const fetchPlugin = (inputCode: string) => {
           contents,
           resolveDir: new URL('./', request.responseURL).pathname
         }
-
         await fileCache.setItem(args.path, result)
         return result
       })
@@ -54,7 +53,6 @@ export const fetchPlugin = (inputCode: string) => {
           contents: data,
           resolveDir: new URL('./', request.responseURL).pathname
         }
-
         await fileCache.setItem(args.path, result)
         return result
       }) 
