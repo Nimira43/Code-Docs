@@ -62,6 +62,7 @@ const App = () => {
         <div className='code-container'> 
           <pre>{code}</pre> 
           <iframe
+            title="Code Execution Preview"
             sandbox="allow-scripts"
             srcDoc={html}
           />
