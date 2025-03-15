@@ -38,9 +38,13 @@ const App = () => {
       }
     })
     setCode(result.outputFiles[0].text)
-
-    eval(result.outputFiles[0].text)
   } 
+
+  const html = `
+    <script>
+      ${code}
+    </script>
+  `
 
   return (
     <>
@@ -57,7 +61,10 @@ const App = () => {
         </div>  
         <div className='code-container'> 
           <pre>{code}</pre> 
-          <iframe src="/test.html"></iframe>
+          <iframe
+            sandbox="allow-scripts"
+            srcDoc={html}
+          />
         </div>
       </div>
     </>
