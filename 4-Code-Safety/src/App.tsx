@@ -14,7 +14,7 @@ const App = () => {
       wasmURL: 'https://unpkg.com/esbuild-wasm@0.8.27/esbuild.wasm'
     })
   } 
-  
+
   useEffect(() => {
     startService()
   }, [])
@@ -38,6 +38,8 @@ const App = () => {
       }
     })
     setCode(result.outputFiles[0].text)
+
+    eval(result.outputFiles[0].text)
   } 
 
   return (
