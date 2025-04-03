@@ -5,6 +5,7 @@ import { fetchPlugin } from './plugins/fetch-plugin'
 
 const App = () => {
   const ref = useRef<any>()
+  const iframe = useRef<any>()
   const [input, setInput] = useState('')
   const [code, setCode] = useState('')
 
@@ -37,7 +38,7 @@ const App = () => {
         global: 'window'
       }
     })
-    setCode(result.outputFiles[0].text)
+    iframe.current.contentWindow.postMessage(result.outputFiles[0].text, '*')
   } 
 
   const html = `
@@ -70,6 +71,7 @@ const App = () => {
         <div className='code-container'> 
           <pre>{code}</pre> 
           <iframe
+            ref={iframe}
             title="Code Execution Preview"
             sandbox="allow-scripts"
             srcDoc={html}
