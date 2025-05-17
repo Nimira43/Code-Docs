@@ -79,7 +79,6 @@ const App = () => {
             placeholder='Enter your code here'
           >
           </textarea>
-          
           <button onClick={onClick}>Submit</button>
         </div>  
         <div className='code-container'> 
