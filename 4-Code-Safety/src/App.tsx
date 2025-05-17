@@ -13,7 +13,6 @@ const App = () => {
       worker: true,
       wasmURL: 'https://unpkg.com/esbuild-wasm@0.8.27/esbuild.wasm'
     })
-    console.log("Esbuild service started!");
   } 
 
   useEffect(() => {
@@ -21,7 +20,6 @@ const App = () => {
   }, [])
 
   const onClick = async () => {
-    console.log("Submit button clicked!")
     if (!ref.current) {
       return
     }
@@ -41,9 +39,7 @@ const App = () => {
         global: 'window'
       }
     })
-    console.log(result);
     iframe.current.contentWindow.postMessage(result.outputFiles[0].text, '*')
-    console.log("Posted to iframe:", result.outputFiles[0].text);
   } 
 
   const html = `
@@ -53,14 +49,13 @@ const App = () => {
         <div id="root"></div>
         <script>
           window.addEventListener('message', (event) => {
-            console.log('Message received:', event.data);
             try {
               eval(event.data)
             } catch (err) {
-              console.error("Runtime error:", err)
               const root = document.querySelector('#root')
               root.innerHTML = '<div style="color: red;"><h4>Runtime Error: </h4>' + err + '</div>'
-              throw err
+              // throw err
+              console.error(err)
             }
           }, false)
         </script>
@@ -70,25 +65,21 @@ const App = () => {
 
   return (
     <>
-      <div className='main-container'>
-        <h1>CodeDocs</h1>
-        <div className='sub-container'>
-          <textarea 
-            value={input}
-            onChange={e => setInput(e.target.value)}
-            placeholder='Enter your code here'
-          >
-          </textarea>
+      <div>
+        <textarea 
+          value={input}
+          onChange={e => setInput(e.target.value)}
+        ></textarea>
+        <div>  
           <button onClick={onClick}>Submit</button>
-        </div>  
-        <div className='code-container'> 
-          <iframe
-            ref={iframe}
-            title="Code Execution Preview"
-            sandbox="allow-scripts"
-            srcDoc={html}
-          />
         </div>
+        {/* <pre>{code}</pre> */}
+        <iframe
+          ref={iframe}
+          title="Code Execution Preview"
+          sandbox="allow-scripts"
+          srcDoc={html}
+        />
       </div>
     </>
   )
