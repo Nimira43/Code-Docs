@@ -5,6 +5,7 @@ const CodeEditor = () => {
     <MonacoEditor
       language='javascript'
       height='500px'
+      theme='dark'
     />
   )
 }
