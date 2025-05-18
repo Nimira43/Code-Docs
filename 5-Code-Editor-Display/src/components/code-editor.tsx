@@ -6,6 +6,9 @@ const CodeEditor = () => {
       language='javascript'
       height='500px'
       theme='dark'
+      options={{
+        wordWrap: 'on',
+      }}
     />
   )
 }
