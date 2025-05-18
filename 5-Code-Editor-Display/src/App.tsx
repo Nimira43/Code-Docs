@@ -65,24 +65,23 @@ const App = () => {
   `
 
   return (
-    <>
-      <div>
-        <textarea 
-          value={input}
-          onChange={e => setInput(e.target.value)}
-        ></textarea>
-        <div>  
-          <button onClick={onClick}>Submit</button>
-        </div>
-        {/* <pre>{code}</pre> */}
-        <iframe
-          ref={iframe}
-          title="Code Execution Preview"
-          sandbox="allow-scripts"
-          srcDoc={html}
-        />
+    <div>
+      <CodeEditor />
+      <textarea 
+        value={input}
+        onChange={e => setInput(e.target.value)}
+      ></textarea>
+      <div>  
+        <button onClick={onClick}>Submit</button>
       </div>
-    </>
+      {/* <pre>{code}</pre> */}
+      <iframe
+        ref={iframe}
+        title="Code Execution Preview"
+        sandbox="allow-scripts"
+        srcDoc={html}
+      />
+    </div>
   )
 }
 export default App
