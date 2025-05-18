@@ -8,6 +8,10 @@ const CodeEditor = () => {
       theme='dark'
       options={{
         wordWrap: 'on',
+        miniMap: { enabled: false },
+        showUnused: false,
+        folding: false,
+        lineNumbersMinChars: 3,
       }}
     />
   )
