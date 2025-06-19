@@ -9,8 +9,10 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
   onChange,
   initialValue 
 }) => {
-  const onEditorDidMount = () => {
-    
+  const onEditorDidMount = (getValue: () => string, monacoEditor: any) => {
+    monacoEditor.onDidChangeModeContent(() => {
+      console.log(getValue)
+    })
   }
 
   return (
