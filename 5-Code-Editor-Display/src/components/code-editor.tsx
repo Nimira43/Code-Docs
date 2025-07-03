@@ -11,10 +11,11 @@ interface CodeEditorProps {
 // }) => {
 
 function CodeEditor({initialValue, onChange}: CodeEditorProps) {
-  const onEditorDidMount: EditorDidMount = (getValue: () => string, monacoEditor: any) => {
+  const onEditorDidMount: EditorDidMount = (getValue,monacoEditor) => {
     monacoEditor.onDidChangeModelContent(() => {
       onChange(getValue())
     })
+    monacoEditor.getModel()?.updateOptions({ tabsSize: 2 })
   }
 
   return (
