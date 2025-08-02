@@ -20,9 +20,18 @@ function CodeEditor({initialValue, onChange}: CodeEditorProps) {
     monacoEditor.getModel()?.updateOptions({ tabSize: 2 })
   }
 
+  const onFormatClick = () => {
+    
+  }
+
+
   return (
     <div>
-    <button>Format Code</button>
+    <button
+      onClick={onFormatClick}
+    >
+      Format Code
+    </button>
       <MonacoEditor
         editorDidMount={onEditorDidMount}
         value={initialValue}
