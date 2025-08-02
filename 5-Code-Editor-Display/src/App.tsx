@@ -1,3 +1,5 @@
+import 'bulmaswatch/solar/bulmaswatch.min.css'
+
 import * as esbuild from 'esbuild-wasm'
 import { useState, useEffect, useRef } from 'react'
 import { unpkgPathPlugin } from './plugins/unpkg-path-plugin'
