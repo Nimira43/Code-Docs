@@ -14,9 +14,11 @@ interface CodeEditorProps {
 // }) => {
 
 function CodeEditor({initialValue, onChange}: CodeEditorProps) {
+
 const editorRef = useRef<any>() 
 
   const onEditorDidMount: EditorDidMount = (getValue, monacoEditor) => {
+    editorRef.current = monacoEditor
     monacoEditor.onDidChangeModelContent(() => {
       onChange(getValue())
     })
@@ -24,9 +26,18 @@ const editorRef = useRef<any>()
   }
 
   const onFormatClick = () => {
+    const unformatted = editorRef.current.getModel().getValue()
+    
+    const formatted = prettier.format(unformatted, {
+      parser: 'babel',
+      plugins: [parser],
+      useTabs: false,
+      semi: false,
+      singleQuote: true
+    })
 
+    editorRef.current.setValue(formatted)
   }
-
 
   return (
     <div>
