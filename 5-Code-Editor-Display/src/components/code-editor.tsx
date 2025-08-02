@@ -21,23 +21,27 @@ function CodeEditor({initialValue, onChange}: CodeEditorProps) {
   }
 
   return (
-    <MonacoEditor
-      editorDidMount={onEditorDidMount}
-      value={initialValue}
-      language='javascript'
-      height='500px'
-      theme='dark'
-      options={{
-        wordWrap: 'on',
-        minimap: { enabled: false },
-        showUnused: false,
-        folding: false,
-        lineNumbersMinChars: 3,
-        fontSize: 16,
-        scrollBeyondLastLine: false,
-        automaticLayout: true,
-      }}
-    />
+    <div>
+    <button>Format Code</button>
+      <MonacoEditor
+        editorDidMount={onEditorDidMount}
+        value={initialValue}
+        language='javascript'
+        height='500px'
+        theme='dark'
+        options={{
+          wordWrap: 'on',
+          minimap: { enabled: false },
+          showUnused: false,
+          folding: false,
+          lineNumbersMinChars: 3,
+          fontSize: 16,
+          scrollBeyondLastLine: false,
+          automaticLayout: true,
+        }}
+      />
+    </div>
+    
   )
 }
 
