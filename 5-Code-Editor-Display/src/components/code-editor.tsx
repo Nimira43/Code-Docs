@@ -14,6 +14,8 @@ interface CodeEditorProps {
 // }) => {
 
 function CodeEditor({initialValue, onChange}: CodeEditorProps) {
+const editorRef = useRef<any>() 
+
   const onEditorDidMount: EditorDidMount = (getValue, monacoEditor) => {
     monacoEditor.onDidChangeModelContent(() => {
       onChange(getValue())
