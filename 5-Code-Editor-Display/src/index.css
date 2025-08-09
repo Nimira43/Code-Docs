@@ -4,5 +4,9 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+button {
+  text-transform: uppercase;
+  font-weight: 500;
+}
 
 

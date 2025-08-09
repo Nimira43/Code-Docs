@@ -42,6 +42,7 @@ const editorRef = useRef<any>()
   return (
     <div>
     <button
+      className='button button-format is-primary is-small'
       onClick={onFormatClick}
     >
       Format Code
