@@ -35,7 +35,7 @@ const editorRef = useRef<any>()
       useTabs: false,
       semi: false,
       singleQuote: true
-    })
+    }).replace(/\n$/, '')
 
     editorRef.current.setValue(formatted)
   }
