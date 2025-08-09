@@ -41,7 +41,7 @@ const editorRef = useRef<any>()
   }
 
   return (
-    <div>
+    <div className='editor-wrapper'>
     <button
       className='button button-format is-primary is-small'
       onClick={onFormatClick}
