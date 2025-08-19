@@ -5,18 +5,15 @@ import parser from 'prettier/parser-babel'
 import { useRef } from 'react'
 
 interface CodeEditorProps {
-  initialValue: string
+  initialValue: string,
   onChange(value: string): void
 }
 
-// const CodeEditor: React.FC<CodeEditorProps> = ({ 
-//   onChange,
-//   initialValue 
-// }) => {
-
-function CodeEditor({initialValue, onChange}: CodeEditorProps) {
-
-const editorRef = useRef<any>() 
+function CodeEditor({
+  initialValue, 
+  onChange
+}: CodeEditorProps) {
+  const editorRef = useRef<any>() 
 
   const onEditorDidMount: EditorDidMount = (getValue, monacoEditor) => {
     editorRef.current = monacoEditor
