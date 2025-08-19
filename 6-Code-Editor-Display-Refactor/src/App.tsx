@@ -1,10 +1,10 @@
 import 'bulmaswatch/solar/bulmaswatch.min.css'
-
 import * as esbuild from 'esbuild-wasm'
 import { useState, useEffect, useRef } from 'react'
 import { unpkgPathPlugin } from './plugins/unpkg-path-plugin'
 import { fetchPlugin } from './plugins/fetch-plugin'
 import CodeEditor from './components/code-editor'
+import Preview from './components/preview'
 
 const App = () => {
   const ref = useRef<any>()
