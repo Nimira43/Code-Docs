@@ -8,7 +8,6 @@ import Preview from './components/preview'
 
 const App = () => {
   const ref = useRef<any>()
-  
   const [input, setInput] = useState('')
 
   const startService = async () => {
@@ -27,8 +26,6 @@ const App = () => {
       return
     }
 
-    
-
     const result = await ref.current.build({
       entryPoints: ['index.js'],
       bundle: true,
@@ -42,10 +39,7 @@ const App = () => {
         global: 'window'
       }
     })
-    
   } 
-
-  
 
   return (
     <div>
@@ -61,9 +55,9 @@ const App = () => {
         <button onClick={onClick}>Submit</button>
       </div>
       {/* <pre>{code}</pre> */}
-      <iframe
-        
-      />
+      <Preview 
+      
+      /> 
     </div>
   )
 }
