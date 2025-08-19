@@ -33,7 +33,14 @@ const Preview = ({ code }: PreviewProps) => {
     iframe.current.contentWindow.postMessage(code, '*')
   }, [code])
 
-  return <iframe />
+  return (
+    <iframe 
+      ref={iframe}
+      title="Code Execution Preview"
+      sandbox="allow-scripts"
+      srcDoc={html}
+    />
+  )
 }
 
 export default Preview
