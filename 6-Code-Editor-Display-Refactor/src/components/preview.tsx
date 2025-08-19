@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 interface PreviewProps {
   code: string
@@ -27,6 +27,11 @@ const html = `
 
 const Preview = ({ code }: PreviewProps) => {
   const iframe = useRef<any>()
+
+  useEffect(() => {
+    iframe.current.srcdoc = html
+  }, [code])
+
   return <iframe />
 }
 
