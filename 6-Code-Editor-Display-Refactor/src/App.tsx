@@ -42,7 +42,7 @@ const App = () => {
         global: 'window'
       }
     })
-    iframe.current.contentWindow.postMessage(result.outputFiles[0].text, '*')
+    
   } 
 
   

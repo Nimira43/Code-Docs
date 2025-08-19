@@ -30,6 +30,7 @@ const Preview = ({ code }: PreviewProps) => {
 
   useEffect(() => {
     iframe.current.srcdoc = html
+    iframe.current.contentWindow.postMessage(result.outputFiles[0].text, '*')
   }, [code])
 
   return <iframe />
