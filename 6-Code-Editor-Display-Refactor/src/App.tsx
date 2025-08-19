@@ -8,7 +8,7 @@ import CodeEditor from './components/code-editor'
 
 const App = () => {
   const ref = useRef<any>()
-  const iframe = useRef<any>()
+  
   const [input, setInput] = useState('')
 
   const startService = async () => {

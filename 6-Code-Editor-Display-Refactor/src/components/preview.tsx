@@ -24,6 +24,7 @@ const html = `
   `
 
 const Preview = ({ code }: PreviewProps) => {
+  const iframe = useRef<any>()
   return <iframe />
 }
 
