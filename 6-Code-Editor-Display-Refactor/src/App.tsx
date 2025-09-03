@@ -42,7 +42,6 @@ const App = () => {
     })
     setCode(result.outputFiles[0].text)
   } 
-
   return (
     <div>
       <CodeEditor 
