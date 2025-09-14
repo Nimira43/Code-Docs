@@ -55,7 +55,6 @@ const App = () => {
       <div>  
         <button onClick={onClick}>Submit</button>
       </div>
-      {/* <pre>{code}</pre> */}
       <Preview 
         code={code}
       /> 
