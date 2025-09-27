@@ -29,8 +29,18 @@ const Preview = ({ code }: PreviewProps) => {
   const iframe = useRef<any>()
 
   useEffect(() => {
-    iframe.current.srcdoc = html
-    iframe.current.contentWindow.postMessage(code, '*')
+    const iframeEl = iframe.current
+    iframeEl.srcdoc = html
+
+    const handleLoad = () => {
+      iframeEl.contentWindow.postMessage(code, '*')
+    }
+
+    iframeEl.addEventListener('load', handleLoad)
+
+    return () => {
+      iframeEl.removeEventListener('load', handleLoad)
+    }
   }, [code])
 
   return (

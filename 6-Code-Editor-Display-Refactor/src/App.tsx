@@ -10,6 +10,7 @@ const App = () => {
 
   const onClick = async () => {
     const output = await bundle(input)
+    console.log('Bundled Output:', output)
     setCode(output)
   }
 
