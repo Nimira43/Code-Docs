@@ -1,43 +1,18 @@
 import 'bulmaswatch/solar/bulmaswatch.min.css'
-
-import { useState, useEffect, useRef } from 'react'
-
+import { useState } from 'react'
 import CodeEditor from './components/code-editor'
 import Preview from './components/preview'
+import bundle from './bundler'
 
 const App = () => {
-  const ref = useRef<any>()
   const [code, setCode] = useState('')
   const [input, setInput] = useState('')
 
-  const startService = async () => {
-    ref.current = 
-  } 
-
-  useEffect(() => {
-    startService()
-  }, [])
-
   const onClick = async () => {
-    if (!ref.current) {
-      return
-    }
+    const output = await bundle(input)
+    setCode(output)
+  }
 
-    const result = await ref.current.build({
-      entryPoints: ['index.js'],
-      bundle: true,
-      write: false,
-      plugins: [
-        unpkgPathPlugin(),
-        fetchPlugin(input)
-      ],
-      define: {
-        'process.env.NODE_ENV': '"production"',
-        global: 'window'
-      }
-    })
-    setCode(result.outputFiles[0].text)
-  } 
   return (
     <div>
       <CodeEditor 
