@@ -1,10 +1,9 @@
-import 'bulmaswatch/solar/bulmaswatch.min.css'
 import { useState } from 'react'
 import CodeEditor from './code-editor'
 import Preview from './preview'
 import bundle from '../bundler'
 
-const App = () => {
+const CodeCell = () => {
   const [code, setCode] = useState('')
   const [input, setInput] = useState('')
 
@@ -29,4 +28,4 @@ const App = () => {
     </div>
   )
 }
-export default App
+export default CodeCell
