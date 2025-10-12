@@ -1,8 +1,8 @@
 import 'bulmaswatch/solar/bulmaswatch.min.css'
 import { useState } from 'react'
-import CodeEditor from './components/code-editor'
-import Preview from './components/preview'
-import bundle from './bundler'
+import CodeEditor from './code-editor'
+import Preview from './preview'
+import bundle from '../bundler'
 
 const App = () => {
   const [code, setCode] = useState('')
