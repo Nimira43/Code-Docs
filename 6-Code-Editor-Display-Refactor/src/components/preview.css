@@ -3,12 +3,18 @@
   height: 100%;
 }
 
-.preview-wrapper:after {
+.preview-wrapper iframe {
+  height: 100%;
+  background-color: #000;
+  color: #fffdfa;
+}
+
+.react-draggable-transparent-selection .preview-wrapper:after {
   content: '';
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: red;
+  opacity: 0;
 }

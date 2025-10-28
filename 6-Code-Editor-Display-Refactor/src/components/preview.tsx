@@ -47,9 +47,6 @@ const Preview = ({ code }: PreviewProps) => {
   return (
     <div className='preview-wrapper'>
       <iframe 
-        style={{
-          backgroundColor: '#fffdfa'
-        }}
         ref={iframe}
         title="Code Execution Preview"
         sandbox="allow-scripts"
