@@ -5,8 +5,13 @@ interface ResizableProps {
   children?: React.ReactNode
 }
 
-const Resizable = () => {
-
+const Resizable = ({ 
+  direction, 
+  children
+}: ResizableProps) => {
+  return (
+    <div>children</div>    
+  )
 }
 
 export default Resizable
