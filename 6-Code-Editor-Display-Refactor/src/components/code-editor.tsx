@@ -49,7 +49,7 @@ function CodeEditor({
         editorDidMount={onEditorDidMount}
         value={initialValue}
         language='javascript'
-        height='500px'
+        height='100%'
         theme='dark'
         options={{
           wordWrap: 'on',

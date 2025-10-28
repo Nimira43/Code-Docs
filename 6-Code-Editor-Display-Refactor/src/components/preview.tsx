@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import './preview.css'
 
 interface PreviewProps {
   code: string
@@ -44,15 +45,17 @@ const Preview = ({ code }: PreviewProps) => {
   }, [code])
 
   return (
-    <iframe 
-      style={{
-        backgroundColor: '#fffdfa'
-      }}
-      ref={iframe}
-      title="Code Execution Preview"
-      sandbox="allow-scripts"
-      srcDoc={html}
-    />
+    <div className='preview-wrapper'>
+      <iframe 
+        style={{
+          backgroundColor: '#fffdfa'
+        }}
+        ref={iframe}
+        title="Code Execution Preview"
+        sandbox="allow-scripts"
+        srcDoc={html}
+      />
+    </div>
   )
 }
 
