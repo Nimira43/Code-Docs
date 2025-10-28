@@ -13,6 +13,7 @@ const Resizable = ({
     <ResizableBox
       height={300}
       width={300}
+      resizeHandles={['s']}
     >
       {children}
     </ResizableBox>    
