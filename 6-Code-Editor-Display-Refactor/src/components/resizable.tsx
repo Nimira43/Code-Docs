@@ -10,7 +10,12 @@ const Resizable = ({
   children
 }: ResizableProps) => {
   return (
-    <div>children</div>    
+    <ResizableBox
+      height={300}
+      width={300}
+    >
+      {children}
+    </ResizableBox>    
   )
 }
 
