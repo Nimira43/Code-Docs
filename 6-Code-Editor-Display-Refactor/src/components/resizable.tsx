@@ -13,7 +13,7 @@ const Resizable = ({
   return (
     <ResizableBox
       height={300}
-      width={300}
+      width={Infinity}
       resizeHandles={['s']}
     >
       {children}
